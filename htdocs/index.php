@@ -1,5 +1,5 @@
 <?php
-const DB_HOST = 'php8.1-db-host'; // .envファイルの DB_HOST_NAME を参照
+const DB_HOST = 'php8-1-mysql';// .envファイルの DB_HOST_NAME を参照
 const DB_PORT = 3306; // docker-compose.ymlファイルの services.db.ports を参照 （右側に記載されているポート番号）
 const DB_DATABASE = 'php_db'; // docker/db/sql/init.sql を参照
 const DB_USERNAME = 'root';
