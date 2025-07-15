@@ -1,14 +1,30 @@
-<?php
-const DB_HOST = 'php8-1-mysql';// .envファイルの DB_HOST_NAME を参照
-const DB_PORT = 3306; // docker-compose.ymlファイルの services.db.ports を参照 （右側に記載されているポート番号）
-const DB_DATABASE = 'php_db'; // docker/db/sql/init.sql を参照
-const DB_USERNAME = 'root';
-const DB_PASSWORD = 'root'; // .envファイルの DB_ROOT_PASSWORD を参照
-const DB_CHARSET = 'utf8mb4';
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>練習</title>
+</head>
+<body>
+<div class="m-5">
+    <div id="errorBox"></div>
 
-$dsn = 'mysql:host=' . DB_HOST . ';port=' . DB_PORT . ';dbname=' . DB_DATABASE . ';charset=' . DB_CHARSET;
-$dbh = new PDO($dsn, DB_USERNAME, DB_PASSWORD);
+    <form method="POST" id="postForm" class="border p-3 mb-3">
+        <label for="name" class="form-label">名前</label>
+        <input type="text" name="name" id="name" class="form-control">
+        <label for="comment" class="form-label">コメント</label>
+        <textarea name="comment" id="comment" class="form-control"></textarea>
+        <button type="submit" id="postBtn" class="btn btn-primary mt-2">投稿</button>
+    </form>
 
-echo 'DB接続成功';
-// PHP の設定情報を出力
-phpinfo();
+    <div id="commentArea" class="commentArea"></div>
+</div>
+
+    <script src="./js/script.js"></script>
+    <!-- bootstrap -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>

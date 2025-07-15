@@ -75,24 +75,13 @@ docker-compose up -d
 ### 確認
 
 - WEB ※ ポート番号は [`.env`](./.env) の `PORT_WEB` を参照
-  - <http://localhost:80/>  
+  - <http://localhost:81/>  
     [htdocs/index.php](./htdocs/index.php)の実行結果が画面に表示されます。
 - phpMyAdmin ※ ポート番号は [`.env`](./.env) の `PORT_PHPMYADMIN` を参照
-  - <http://localhost:8080>
+  - <http://localhost:8081>
 
 ### SQLクライアント
 
-こちらは任意です。
-
-- `DBeaver`
-  - <https://dbeaver.io/>
-  - 接続情報 ※ [`.env`](./.env) の情報にあわせて設定すること
-    - ドライバ名: `MySQL`
-    - ServerHost: `localhost`  ～  `IP` 参照 (localhost = 127.0.0.1)
-    - Port: `3306`  ～  `PORT_DB` 参照
-    - Database: ※ 未入力でOK
-    - ユーザー名: `root`
-    - パスワード: `root`  ～  `DB_ROOT_PASSWORD` 参照
 - `A5:SQL Mk-2`
   - <https://a5m2.mmatsubara.com/>
   - 接続情報 ※ [`.env`](./.env) の情報にあわせて設定すること
